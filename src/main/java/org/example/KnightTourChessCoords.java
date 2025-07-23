@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.Random; // Importar la clase Random
+
 public class KnightTourChessCoords {
 
     private static final int BOARD_SIZE = 8;
@@ -16,6 +18,7 @@ public class KnightTourChessCoords {
 
     /**
      * Initiates the Knight's Tour problem resolution.
+     * The starting position is now randomly selected.
      */
     public static void solveKnightTour() {
         // Initialize the board with -1 (indicating unvisited squares)
@@ -25,22 +28,27 @@ public class KnightTourChessCoords {
             }
         }
 
-        // The knight starts at position (0,0) and it's the first step (0)
-        chessBoard[0][0] = 0;
-        tourPath[0] = toChessCoordinate(0, 0); // Save the starting chess coordinate
+        // --- NEW: Randomly select a starting position ---
+        Random random = new Random();
+        int startRow = random.nextInt(BOARD_SIZE); // Random row from 0 to BOARD_SIZE-1
+        int startCol = random.nextInt(BOARD_SIZE); // Random column from 0 to BOARD_SIZE-1
 
-        System.out.println("Attempting to solve the Knight's Tour...");
+        System.out.println("Attempting to solve the Knight's Tour starting from " + toChessCoordinate(startRow, startCol) + "...");
         System.out.println("--- Backtracking Log ---");
 
-        // Try to solve the tour starting from the initial position
-        if (solveKnightTourUtil(0, 0, 1)) {
+        // The knight starts at the randomly chosen position and it's the first step (0)
+        chessBoard[startRow][startCol] = 0;
+        tourPath[0] = toChessCoordinate(startRow, startCol); // Save the starting chess coordinate
+
+        // Try to solve the tour starting from the initial random position
+        if (solveKnightTourUtil(startRow, startCol, 1)) {
             System.out.println("\n--- Tour Found! ---");
             System.out.println("Movement sequence in chess notation:");
             printTourPath();
             System.out.println("\nBoard with step order:");
             printBoard();
         } else {
-            System.out.println("\nNo Knight's Tour found that visits all squares from the starting position (A1).");
+            System.out.println("\nNo Knight's Tour found that visits all squares from the starting position (" + toChessCoordinate(startRow, startCol) + ").");
         }
     }
 
@@ -58,12 +66,12 @@ public class KnightTourChessCoords {
             return true;
         }
 
-        // Probar los 8 posibles movimientos del caballo
+        // Try all 8 possible knight moves
         for (int i = 0; i < 8; i++) {
             int nextRow = currentRow + xMoves[i];
             int nextCol = currentCol + yMoves[i];
 
-            // Verificar si el movimiento es válido
+            // Check if the move is valid
             if (isValidMove(nextRow, nextCol)) {
                 chessBoard[nextRow][nextCol] = moveCount; // Mark the square with the step number
                 tourPath[moveCount] = toChessCoordinate(nextRow, nextCol); // Save the chess coordinate
@@ -82,9 +90,6 @@ public class KnightTourChessCoords {
                             " attempted " + toChessCoordinate(nextRow, nextCol) + ". No solution from here. Undoing.");
                 }
             }
-            // No 'else' needed here for invalid moves (out of bounds/already visited)
-            // as they are simply skipped by the isValidMove check and don't involve backtracking
-            // of a "marked" square.
         }
         return false; // No tour found from this position
     }
