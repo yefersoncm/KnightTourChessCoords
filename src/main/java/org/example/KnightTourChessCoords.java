@@ -12,7 +12,7 @@ public class KnightTourChessCoords {
     private static int[] xMoves = {2, 1, -1, -2, -2, -1, 1, 2}; // Possible X-direction moves for the knight
     private static int[] yMoves = {1, 2, 2, 1, -1, -2, -2, -1}; // Possible Y-direction moves for the knight
 
-    // Array to store the sequence of visited chess coordinates
+    // Array to store the sequence of visited chess coordinates for the final solution
     private static String[] tourPath = new String[BOARD_SIZE * BOARD_SIZE];
 
     // Inner class to represent a potential move with its Warnsdorff's degree
@@ -56,16 +56,19 @@ public class KnightTourChessCoords {
         int startCol = random.nextInt(BOARD_SIZE); // Random column from 0 to BOARD_SIZE-1
 
         System.out.println("Attempting to solve the Knight's Tour starting from " + toChessCoordinate(startRow, startCol) + " using Warnsdorff's Rule...");
-        // Disabling detailed backtracking log for Warnsdorff's as it's typically very fast
-        // System.out.println("--- Backtracking Log ---");
+        System.out.println("\n--- Detailed Movement Log ---"); // New header for the detailed log
 
         // The knight starts at the randomly chosen position and it's the first step (0)
         chessBoard[startRow][startCol] = 0;
         tourPath[0] = toChessCoordinate(startRow, startCol); // Save the starting chess coordinate
 
+        System.out.println("STEP 0: Starting at " + toChessCoordinate(startRow, startCol)); // Log start
+
         long startTime = System.currentTimeMillis(); // Start timer
         boolean solved = solveKnightTourUtil(startRow, startCol, 1);
         long endTime = System.currentTimeMillis();   // End timer
+
+        System.out.println("\n--- Search Complete ---"); // End of detailed log
 
         if (solved) {
             System.out.println("\n--- Knight's Tour Found! ---");
@@ -96,38 +99,53 @@ public class KnightTourChessCoords {
 
         List<Move> possibleMoves = new ArrayList<>();
 
-        // Generate all valid next moves and calculate their degrees
+        // Generate all 8 potential next moves and evaluate them
         for (int i = 0; i < 8; i++) {
             int nextRow = currentRow + xMoves[i];
             int nextCol = currentCol + yMoves[i];
+            String attemptedCoord = toChessCoordinate(nextRow, nextCol);
 
-            if (isValidMove(nextRow, nextCol)) {
-                // IMPORTANT: Calculate the degree for the 'next' square, considering it as visited
-                // temporarily to avoid counting moves back to the current square, or counting to squares
-                // that would become invalid if this move was made.
-                chessBoard[nextRow][nextCol] = moveCount; // Temporarily mark as visited for degree calculation
-                int degree = getDegree(nextRow, nextCol);
-                chessBoard[nextRow][nextCol] = -1; // Unmark immediately after degree calculation
+            // Check if the potential move is within bounds
+            if (nextRow >= 0 && nextRow < BOARD_SIZE && nextCol >= 0 && nextCol < BOARD_SIZE) {
+                // Check if the square is unvisited
+                if (chessBoard[nextRow][nextCol] == -1) {
+                    // This is a VALID potential move for exploration
+                    // Temporarily mark as visited for accurate degree calculation
+                    chessBoard[nextRow][nextCol] = moveCount;
+                    int degree = getDegree(nextRow, nextCol);
+                    chessBoard[nextRow][nextCol] = -1; // Unmark immediately after degree calculation
 
-                possibleMoves.add(new Move(nextRow, nextCol, degree));
+                    possibleMoves.add(new Move(nextRow, nextCol, degree));
+                    System.out.println("STEP " + moveCount + ": From " + toChessCoordinate(currentRow, currentCol) +
+                            " -> Valid potential move to " + attemptedCoord + " (Degree: " + degree + ")");
+                } else {
+                    // This is an INVALID move because the square is already visited
+                    System.out.println("STEP " + moveCount + ": From " + toChessCoordinate(currentRow, currentCol) +
+                            " -> INVALID move to " + attemptedCoord + " (Already visited). Skipping.");
+                }
+            } else {
+                // This is an INVALID move because it's out of bounds
+                System.out.println("STEP " + moveCount + ": From " + toChessCoordinate(currentRow, currentCol) +
+                        " -> INVALID move to " + attemptedCoord + " (Out of bounds). Skipping.");
             }
         }
 
-        // Sort moves based on Warnsdorff's Rule (ascending degree)
+        // Sort valid potential moves based on Warnsdorff's Rule (ascending degree)
         Collections.sort(possibleMoves);
 
-        // Iterate through the sorted possible moves
+        // Iterate through the sorted possible moves and explore them
         for (Move move : possibleMoves) {
             int nextRow = move.row;
             int nextCol = move.col;
+            String nextCoord = toChessCoordinate(nextRow, nextCol);
 
-            // This check is technically redundant if isValidMove was used when populating possibleMoves,
-            // but it's good defensive programming in case external factors change board state in complex scenarios.
-            // For this specific code, it primarily re-checks against already visited status if degree calculation
-            // was done differently.
-            if (chessBoard[nextRow][nextCol] == -1) { // Ensure it's still unvisited after sorting
+            // Re-check if it's still unvisited (defensive, as it should be if added correctly)
+            if (chessBoard[nextRow][nextCol] == -1) {
                 chessBoard[nextRow][nextCol] = moveCount; // Mark the square with the step number
-                tourPath[moveCount] = toChessCoordinate(nextRow, nextCol); // Save the chess coordinate
+                tourPath[moveCount] = nextCoord; // Save the chess coordinate
+
+                System.out.println("STEP " + moveCount + ": Exploring path from " + toChessCoordinate(currentRow, currentCol) +
+                        " to " + nextCoord + " (Selected as best next move).");
 
                 // Recursive call for the next move
                 if (solveKnightTourUtil(nextRow, nextCol, moveCount + 1)) {
@@ -137,11 +155,12 @@ public class KnightTourChessCoords {
                     chessBoard[nextRow][nextCol] = -1; // Unmark the square
                     tourPath[moveCount] = null; // Remove the coordinate from the path
 
-                    // Generally, with Warnsdorff's, you see much less backtracking,
-                    // so logging every step might not be as useful. Uncomment if needed for debugging.
-                    // System.out.println("BACKTRACKING: Move " + moveCount + ": From " + toChessCoordinate(currentRow, currentCol) +
-                    //                    " attempted " + toChessCoordinate(nextRow, nextCol) + ". No solution from here. Undoing.");
+                    System.out.println("BACKTRACKING: Move " + moveCount + ": Path from " + toChessCoordinate(currentRow, currentCol) +
+                            " via " + nextCoord + " led to a dead end. Undoing " + nextCoord + ".");
                 }
+            } else {
+                // This should ideally not happen if logic for populating possibleMoves is correct
+                System.out.println("WARNING: Tried to re-visit " + nextCoord + " at move " + moveCount + " after sorting. Skipping.");
             }
         }
         return false; // No tour found from this position
@@ -174,6 +193,8 @@ public class KnightTourChessCoords {
     /**
      * Checks if a square is a valid move for the knight.
      * A move is valid if it's within board bounds and the square is unvisited.
+     * (Note: This specific helper is less critical with the detailed logging,
+     * as its checks are now embedded in the logging logic, but kept for clarity).
      *
      * @param row The row of the square.
      * @param col The column of the square.
