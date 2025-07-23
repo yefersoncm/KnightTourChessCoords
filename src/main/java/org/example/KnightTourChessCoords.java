@@ -30,10 +30,11 @@ public class KnightTourChessCoords {
         tourPath[0] = toChessCoordinate(0, 0); // Save the starting chess coordinate
 
         System.out.println("Attempting to solve the Knight's Tour...");
+        System.out.println("--- Backtracking Log ---");
 
         // Try to solve the tour starting from the initial position
         if (solveKnightTourUtil(0, 0, 1)) {
-            System.out.println("\nKnight's Tour found!");
+            System.out.println("\n--- Tour Found! ---");
             System.out.println("Movement sequence in chess notation:");
             printTourPath();
             System.out.println("\nBoard with step order:");
@@ -57,12 +58,12 @@ public class KnightTourChessCoords {
             return true;
         }
 
-        // Try all 8 possible knight moves
+        // Probar los 8 posibles movimientos del caballo
         for (int i = 0; i < 8; i++) {
             int nextRow = currentRow + xMoves[i];
             int nextCol = currentCol + yMoves[i];
 
-            // Check if the move is valid
+            // Verificar si el movimiento es válido
             if (isValidMove(nextRow, nextCol)) {
                 chessBoard[nextRow][nextCol] = moveCount; // Mark the square with the step number
                 tourPath[moveCount] = toChessCoordinate(nextRow, nextCol); // Save the chess coordinate
@@ -75,8 +76,15 @@ public class KnightTourChessCoords {
                     // (backtracking) and try another option
                     chessBoard[nextRow][nextCol] = -1; // Unmark the square
                     tourPath[moveCount] = null; // Remove the coordinate from the path
+
+                    // Log the backtracking step
+                    System.out.println("BACKTRACKING: Move " + moveCount + ": From " + toChessCoordinate(currentRow, currentCol) +
+                            " attempted " + toChessCoordinate(nextRow, nextCol) + ". No solution from here. Undoing.");
                 }
             }
+            // No 'else' needed here for invalid moves (out of bounds/already visited)
+            // as they are simply skipped by the isValidMove check and don't involve backtracking
+            // of a "marked" square.
         }
         return false; // No tour found from this position
     }
