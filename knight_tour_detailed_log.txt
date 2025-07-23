@@ -1,0 +1,594 @@
+Attempting to solve the Knight's Tour starting from H2 using Warnsdorff's Rule...
+
+--- Detailed Movement Log ---
+STEP 0: Starting at H2
+STEP 1: From H2 -> INVALID move to I0 (Out of bounds). Skipping.
+STEP 1: From H2 -> INVALID move to J1 (Out of bounds). Skipping.
+STEP 1: From H2 -> INVALID move to J3 (Out of bounds). Skipping.
+STEP 1: From H2 -> INVALID move to I4 (Out of bounds). Skipping.
+STEP 1: From H2 -> Valid potential move to G4 (Degree: 5)
+STEP 1: From H2 -> Valid potential move to F3 (Degree: 7)
+STEP 1: From H2 -> Valid potential move to F1 (Degree: 3)
+STEP 1: From H2 -> INVALID move to G0 (Out of bounds). Skipping.
+STEP 1: Exploring path from H2 to F1 (Selected as best next move).
+STEP 2: From F1 -> INVALID move to G-1 (Out of bounds). Skipping.
+STEP 2: From F1 -> INVALID move to H0 (Out of bounds). Skipping.
+STEP 2: From F1 -> INVALID move to H2 (Already visited). Skipping.
+STEP 2: From F1 -> Valid potential move to G3 (Degree: 5)
+STEP 2: From F1 -> Valid potential move to E3 (Degree: 7)
+STEP 2: From F1 -> Valid potential move to D2 (Degree: 5)
+STEP 2: From F1 -> INVALID move to D0 (Out of bounds). Skipping.
+STEP 2: From F1 -> INVALID move to E-1 (Out of bounds). Skipping.
+STEP 2: Exploring path from F1 to G3 (Selected as best next move).
+STEP 3: From G3 -> Valid potential move to H1 (Degree: 1)
+STEP 3: From G3 -> INVALID move to I2 (Out of bounds). Skipping.
+STEP 3: From G3 -> INVALID move to I4 (Out of bounds). Skipping.
+STEP 3: From G3 -> Valid potential move to H5 (Degree: 3)
+STEP 3: From G3 -> Valid potential move to F5 (Degree: 7)
+STEP 3: From G3 -> Valid potential move to E4 (Degree: 7)
+STEP 3: From G3 -> Valid potential move to E2 (Degree: 5)
+STEP 3: From G3 -> INVALID move to F1 (Already visited). Skipping.
+STEP 3: Exploring path from G3 to H1 (Selected as best next move).
+STEP 4: From H1 -> INVALID move to I-1 (Out of bounds). Skipping.
+STEP 4: From H1 -> INVALID move to J0 (Out of bounds). Skipping.
+STEP 4: From H1 -> INVALID move to J2 (Out of bounds). Skipping.
+STEP 4: From H1 -> INVALID move to I3 (Out of bounds). Skipping.
+STEP 4: From H1 -> INVALID move to G3 (Already visited). Skipping.
+STEP 4: From H1 -> Valid potential move to F2 (Degree: 5)
+STEP 4: From H1 -> INVALID move to F0 (Out of bounds). Skipping.
+STEP 4: From H1 -> INVALID move to G-1 (Out of bounds). Skipping.
+STEP 4: Exploring path from H1 to F2 (Selected as best next move).
+STEP 5: From F2 -> INVALID move to G0 (Out of bounds). Skipping.
+STEP 5: From F2 -> INVALID move to H1 (Already visited). Skipping.
+STEP 5: From F2 -> Valid potential move to H3 (Degree: 3)
+STEP 5: From F2 -> Valid potential move to G4 (Degree: 4)
+STEP 5: From F2 -> Valid potential move to E4 (Degree: 6)
+STEP 5: From F2 -> Valid potential move to D3 (Degree: 7)
+STEP 5: From F2 -> Valid potential move to D1 (Degree: 3)
+STEP 5: From F2 -> INVALID move to E0 (Out of bounds). Skipping.
+STEP 5: Exploring path from F2 to H3 (Selected as best next move).
+STEP 6: From H3 -> INVALID move to I1 (Out of bounds). Skipping.
+STEP 6: From H3 -> INVALID move to J2 (Out of bounds). Skipping.
+STEP 6: From H3 -> INVALID move to J4 (Out of bounds). Skipping.
+STEP 6: From H3 -> INVALID move to I5 (Out of bounds). Skipping.
+STEP 6: From H3 -> Valid potential move to G5 (Degree: 5)
+STEP 6: From H3 -> Valid potential move to F4 (Degree: 7)
+STEP 6: From H3 -> INVALID move to F2 (Already visited). Skipping.
+STEP 6: From H3 -> Valid potential move to G1 (Degree: 2)
+STEP 6: Exploring path from H3 to G1 (Selected as best next move).
+STEP 7: From G1 -> INVALID move to H-1 (Out of bounds). Skipping.
+STEP 7: From G1 -> INVALID move to I0 (Out of bounds). Skipping.
+STEP 7: From G1 -> INVALID move to I2 (Out of bounds). Skipping.
+STEP 7: From G1 -> INVALID move to H3 (Already visited). Skipping.
+STEP 7: From G1 -> Valid potential move to F3 (Degree: 6)
+STEP 7: From G1 -> Valid potential move to E2 (Degree: 4)
+STEP 7: From G1 -> INVALID move to E0 (Out of bounds). Skipping.
+STEP 7: From G1 -> INVALID move to F-1 (Out of bounds). Skipping.
+STEP 7: Exploring path from G1 to E2 (Selected as best next move).
+STEP 8: From E2 -> INVALID move to F0 (Out of bounds). Skipping.
+STEP 8: From E2 -> INVALID move to G1 (Already visited). Skipping.
+STEP 8: From E2 -> INVALID move to G3 (Already visited). Skipping.
+STEP 8: From E2 -> Valid potential move to F4 (Degree: 6)
+STEP 8: From E2 -> Valid potential move to D4 (Degree: 7)
+STEP 8: From E2 -> Valid potential move to C3 (Degree: 7)
+STEP 8: From E2 -> Valid potential move to C1 (Degree: 3)
+STEP 8: From E2 -> INVALID move to D0 (Out of bounds). Skipping.
+STEP 8: Exploring path from E2 to C1 (Selected as best next move).
+STEP 9: From C1 -> INVALID move to D-1 (Out of bounds). Skipping.
+STEP 9: From C1 -> INVALID move to E0 (Out of bounds). Skipping.
+STEP 9: From C1 -> INVALID move to E2 (Already visited). Skipping.
+STEP 9: From C1 -> Valid potential move to D3 (Degree: 6)
+STEP 9: From C1 -> Valid potential move to B3 (Degree: 5)
+STEP 9: From C1 -> Valid potential move to A2 (Degree: 2)
+STEP 9: From C1 -> INVALID move to A0 (Out of bounds). Skipping.
+STEP 9: From C1 -> INVALID move to B-1 (Out of bounds). Skipping.
+STEP 9: Exploring path from C1 to A2 (Selected as best next move).
+STEP 10: From A2 -> INVALID move to B0 (Out of bounds). Skipping.
+STEP 10: From A2 -> INVALID move to C1 (Already visited). Skipping.
+STEP 10: From A2 -> Valid potential move to C3 (Degree: 6)
+STEP 10: From A2 -> Valid potential move to B4 (Degree: 5)
+STEP 10: From A2 -> INVALID move to @4 (Out of bounds). Skipping.
+STEP 10: From A2 -> INVALID move to ?3 (Out of bounds). Skipping.
+STEP 10: From A2 -> INVALID move to ?1 (Out of bounds). Skipping.
+STEP 10: From A2 -> INVALID move to @0 (Out of bounds). Skipping.
+STEP 10: Exploring path from A2 to B4 (Selected as best next move).
+STEP 11: From B4 -> Valid potential move to C2 (Degree: 5)
+STEP 11: From B4 -> Valid potential move to D3 (Degree: 5)
+STEP 11: From B4 -> Valid potential move to D5 (Degree: 7)
+STEP 11: From B4 -> Valid potential move to C6 (Degree: 7)
+STEP 11: From B4 -> Valid potential move to A6 (Degree: 3)
+STEP 11: From B4 -> INVALID move to @5 (Out of bounds). Skipping.
+STEP 11: From B4 -> INVALID move to @3 (Out of bounds). Skipping.
+STEP 11: From B4 -> INVALID move to A2 (Already visited). Skipping.
+STEP 11: Exploring path from B4 to A6 (Selected as best next move).
+STEP 12: From A6 -> INVALID move to B4 (Already visited). Skipping.
+STEP 12: From A6 -> Valid potential move to C5 (Degree: 7)
+STEP 12: From A6 -> Valid potential move to C7 (Degree: 5)
+STEP 12: From A6 -> Valid potential move to B8 (Degree: 2)
+STEP 12: From A6 -> INVALID move to @8 (Out of bounds). Skipping.
+STEP 12: From A6 -> INVALID move to ?7 (Out of bounds). Skipping.
+STEP 12: From A6 -> INVALID move to ?5 (Out of bounds). Skipping.
+STEP 12: From A6 -> INVALID move to @4 (Out of bounds). Skipping.
+STEP 12: Exploring path from A6 to B8 (Selected as best next move).
+STEP 13: From B8 -> Valid potential move to C6 (Degree: 6)
+STEP 13: From B8 -> Valid potential move to D7 (Degree: 5)
+STEP 13: From B8 -> INVALID move to D9 (Out of bounds). Skipping.
+STEP 13: From B8 -> INVALID move to C10 (Out of bounds). Skipping.
+STEP 13: From B8 -> INVALID move to A10 (Out of bounds). Skipping.
+STEP 13: From B8 -> INVALID move to @9 (Out of bounds). Skipping.
+STEP 13: From B8 -> INVALID move to @7 (Out of bounds). Skipping.
+STEP 13: From B8 -> INVALID move to A6 (Already visited). Skipping.
+STEP 13: Exploring path from B8 to D7 (Selected as best next move).
+STEP 14: From D7 -> Valid potential move to E5 (Degree: 7)
+STEP 14: From D7 -> Valid potential move to F6 (Degree: 7)
+STEP 14: From D7 -> Valid potential move to F8 (Degree: 3)
+STEP 14: From D7 -> INVALID move to E9 (Out of bounds). Skipping.
+STEP 14: From D7 -> INVALID move to C9 (Out of bounds). Skipping.
+STEP 14: From D7 -> INVALID move to B8 (Already visited). Skipping.
+STEP 14: From D7 -> Valid potential move to B6 (Degree: 5)
+STEP 14: From D7 -> Valid potential move to C5 (Degree: 6)
+STEP 14: Exploring path from D7 to F8 (Selected as best next move).
+STEP 15: From F8 -> Valid potential move to G6 (Degree: 5)
+STEP 15: From F8 -> Valid potential move to H7 (Degree: 2)
+STEP 15: From F8 -> INVALID move to H9 (Out of bounds). Skipping.
+STEP 15: From F8 -> INVALID move to G10 (Out of bounds). Skipping.
+STEP 15: From F8 -> INVALID move to E10 (Out of bounds). Skipping.
+STEP 15: From F8 -> INVALID move to D9 (Out of bounds). Skipping.
+STEP 15: From F8 -> INVALID move to D7 (Already visited). Skipping.
+STEP 15: From F8 -> Valid potential move to E6 (Degree: 7)
+STEP 15: Exploring path from F8 to H7 (Selected as best next move).
+STEP 16: From H7 -> INVALID move to I5 (Out of bounds). Skipping.
+STEP 16: From H7 -> INVALID move to J6 (Out of bounds). Skipping.
+STEP 16: From H7 -> INVALID move to J8 (Out of bounds). Skipping.
+STEP 16: From H7 -> INVALID move to I9 (Out of bounds). Skipping.
+STEP 16: From H7 -> INVALID move to G9 (Out of bounds). Skipping.
+STEP 16: From H7 -> INVALID move to F8 (Already visited). Skipping.
+STEP 16: From H7 -> Valid potential move to F6 (Degree: 6)
+STEP 16: From H7 -> Valid potential move to G5 (Degree: 4)
+STEP 16: Exploring path from H7 to G5 (Selected as best next move).
+STEP 17: From G5 -> INVALID move to H3 (Already visited). Skipping.
+STEP 17: From G5 -> INVALID move to I4 (Out of bounds). Skipping.
+STEP 17: From G5 -> INVALID move to I6 (Out of bounds). Skipping.
+STEP 17: From G5 -> INVALID move to H7 (Already visited). Skipping.
+STEP 17: From G5 -> Valid potential move to F7 (Degree: 5)
+STEP 17: From G5 -> Valid potential move to E6 (Degree: 6)
+STEP 17: From G5 -> Valid potential move to E4 (Degree: 5)
+STEP 17: From G5 -> Valid potential move to F3 (Degree: 5)
+STEP 17: Exploring path from G5 to F7 (Selected as best next move).
+STEP 18: From F7 -> INVALID move to G5 (Already visited). Skipping.
+STEP 18: From F7 -> Valid potential move to H6 (Degree: 3)
+STEP 18: From F7 -> Valid potential move to H8 (Degree: 1)
+STEP 18: From F7 -> INVALID move to G9 (Out of bounds). Skipping.
+STEP 18: From F7 -> INVALID move to E9 (Out of bounds). Skipping.
+STEP 18: From F7 -> Valid potential move to D8 (Degree: 3)
+STEP 18: From F7 -> Valid potential move to D6 (Degree: 7)
+STEP 18: From F7 -> Valid potential move to E5 (Degree: 6)
+STEP 18: Exploring path from F7 to H8 (Selected as best next move).
+STEP 19: From H8 -> INVALID move to I6 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to J7 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to J9 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to I10 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to G10 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to F9 (Out of bounds). Skipping.
+STEP 19: From H8 -> INVALID move to F7 (Already visited). Skipping.
+STEP 19: From H8 -> Valid potential move to G6 (Degree: 4)
+STEP 19: Exploring path from H8 to G6 (Selected as best next move).
+STEP 20: From G6 -> Valid potential move to H4 (Degree: 3)
+STEP 20: From G6 -> INVALID move to I5 (Out of bounds). Skipping.
+STEP 20: From G6 -> INVALID move to I7 (Out of bounds). Skipping.
+STEP 20: From G6 -> INVALID move to H8 (Already visited). Skipping.
+STEP 20: From G6 -> INVALID move to F8 (Already visited). Skipping.
+STEP 20: From G6 -> Valid potential move to E7 (Degree: 5)
+STEP 20: From G6 -> Valid potential move to E5 (Degree: 5)
+STEP 20: From G6 -> Valid potential move to F4 (Degree: 5)
+STEP 20: Exploring path from G6 to H4 (Selected as best next move).
+STEP 21: From H4 -> INVALID move to I2 (Out of bounds). Skipping.
+STEP 21: From H4 -> INVALID move to J3 (Out of bounds). Skipping.
+STEP 21: From H4 -> INVALID move to J5 (Out of bounds). Skipping.
+STEP 21: From H4 -> INVALID move to I6 (Out of bounds). Skipping.
+STEP 21: From H4 -> INVALID move to G6 (Already visited). Skipping.
+STEP 21: From H4 -> Valid potential move to F5 (Degree: 6)
+STEP 21: From H4 -> Valid potential move to F3 (Degree: 4)
+STEP 21: From H4 -> Valid potential move to G2 (Degree: 3)
+STEP 21: Exploring path from H4 to G2 (Selected as best next move).
+STEP 22: From G2 -> INVALID move to H0 (Out of bounds). Skipping.
+STEP 22: From G2 -> INVALID move to I1 (Out of bounds). Skipping.
+STEP 22: From G2 -> INVALID move to I3 (Out of bounds). Skipping.
+STEP 22: From G2 -> INVALID move to H4 (Already visited). Skipping.
+STEP 22: From G2 -> Valid potential move to F4 (Degree: 4)
+STEP 22: From G2 -> Valid potential move to E3 (Degree: 6)
+STEP 22: From G2 -> Valid potential move to E1 (Degree: 3)
+STEP 22: From G2 -> INVALID move to F0 (Out of bounds). Skipping.
+STEP 22: Exploring path from G2 to E1 (Selected as best next move).
+STEP 23: From E1 -> INVALID move to F-1 (Out of bounds). Skipping.
+STEP 23: From E1 -> INVALID move to G0 (Out of bounds). Skipping.
+STEP 23: From E1 -> INVALID move to G2 (Already visited). Skipping.
+STEP 23: From E1 -> Valid potential move to F3 (Degree: 3)
+STEP 23: From E1 -> Valid potential move to D3 (Degree: 4)
+STEP 23: From E1 -> Valid potential move to C2 (Degree: 4)
+STEP 23: From E1 -> INVALID move to C0 (Out of bounds). Skipping.
+STEP 23: From E1 -> INVALID move to D-1 (Out of bounds). Skipping.
+STEP 23: Exploring path from E1 to F3 (Selected as best next move).
+STEP 24: From F3 -> INVALID move to G1 (Already visited). Skipping.
+STEP 24: From F3 -> INVALID move to H2 (Already visited). Skipping.
+STEP 24: From F3 -> INVALID move to H4 (Already visited). Skipping.
+STEP 24: From F3 -> INVALID move to G5 (Already visited). Skipping.
+STEP 24: From F3 -> Valid potential move to E5 (Degree: 4)
+STEP 24: From F3 -> Valid potential move to D4 (Degree: 6)
+STEP 24: From F3 -> Valid potential move to D2 (Degree: 4)
+STEP 24: From F3 -> INVALID move to E1 (Already visited). Skipping.
+STEP 24: Exploring path from F3 to E5 (Selected as best next move).
+STEP 25: From E5 -> INVALID move to F3 (Already visited). Skipping.
+STEP 25: From E5 -> Valid potential move to G4 (Degree: 3)
+STEP 25: From E5 -> INVALID move to G6 (Already visited). Skipping.
+STEP 25: From E5 -> INVALID move to F7 (Already visited). Skipping.
+STEP 25: From E5 -> INVALID move to D7 (Already visited). Skipping.
+STEP 25: From E5 -> Valid potential move to C6 (Degree: 5)
+STEP 25: From E5 -> Valid potential move to C4 (Degree: 7)
+STEP 25: From E5 -> Valid potential move to D3 (Degree: 3)
+STEP 25: Exploring path from E5 to G4 (Selected as best next move).
+STEP 26: From G4 -> INVALID move to H2 (Already visited). Skipping.
+STEP 26: From G4 -> INVALID move to I3 (Out of bounds). Skipping.
+STEP 26: From G4 -> INVALID move to I5 (Out of bounds). Skipping.
+STEP 26: From G4 -> Valid potential move to H6 (Degree: 2)
+STEP 26: From G4 -> Valid potential move to F6 (Degree: 5)
+STEP 26: From G4 -> INVALID move to E5 (Already visited). Skipping.
+STEP 26: From G4 -> Valid potential move to E3 (Degree: 5)
+STEP 26: From G4 -> INVALID move to F2 (Already visited). Skipping.
+STEP 26: Exploring path from G4 to H6 (Selected as best next move).
+STEP 27: From H6 -> INVALID move to I4 (Out of bounds). Skipping.
+STEP 27: From H6 -> INVALID move to J5 (Out of bounds). Skipping.
+STEP 27: From H6 -> INVALID move to J7 (Out of bounds). Skipping.
+STEP 27: From H6 -> INVALID move to I8 (Out of bounds). Skipping.
+STEP 27: From H6 -> Valid potential move to G8 (Degree: 2)
+STEP 27: From H6 -> INVALID move to F7 (Already visited). Skipping.
+STEP 27: From H6 -> Valid potential move to F5 (Degree: 5)
+STEP 27: From H6 -> INVALID move to G4 (Already visited). Skipping.
+STEP 27: Exploring path from H6 to G8 (Selected as best next move).
+STEP 28: From G8 -> INVALID move to H6 (Already visited). Skipping.
+STEP 28: From G8 -> INVALID move to I7 (Out of bounds). Skipping.
+STEP 28: From G8 -> INVALID move to I9 (Out of bounds). Skipping.
+STEP 28: From G8 -> INVALID move to H10 (Out of bounds). Skipping.
+STEP 28: From G8 -> INVALID move to F10 (Out of bounds). Skipping.
+STEP 28: From G8 -> INVALID move to E9 (Out of bounds). Skipping.
+STEP 28: From G8 -> Valid potential move to E7 (Degree: 4)
+STEP 28: From G8 -> Valid potential move to F6 (Degree: 4)
+STEP 28: Exploring path from G8 to E7 (Selected as best next move).
+STEP 29: From E7 -> Valid potential move to F5 (Degree: 4)
+STEP 29: From E7 -> INVALID move to G6 (Already visited). Skipping.
+STEP 29: From E7 -> INVALID move to G8 (Already visited). Skipping.
+STEP 29: From E7 -> INVALID move to F9 (Out of bounds). Skipping.
+STEP 29: From E7 -> INVALID move to D9 (Out of bounds). Skipping.
+STEP 29: From E7 -> Valid potential move to C8 (Degree: 3)
+STEP 29: From E7 -> Valid potential move to C6 (Degree: 4)
+STEP 29: From E7 -> Valid potential move to D5 (Degree: 6)
+STEP 29: Exploring path from E7 to C8 (Selected as best next move).
+STEP 30: From C8 -> Valid potential move to D6 (Degree: 6)
+STEP 30: From C8 -> INVALID move to E7 (Already visited). Skipping.
+STEP 30: From C8 -> INVALID move to E9 (Out of bounds). Skipping.
+STEP 30: From C8 -> INVALID move to D10 (Out of bounds). Skipping.
+STEP 30: From C8 -> INVALID move to B10 (Out of bounds). Skipping.
+STEP 30: From C8 -> INVALID move to A9 (Out of bounds). Skipping.
+STEP 30: From C8 -> Valid potential move to A7 (Degree: 2)
+STEP 30: From C8 -> Valid potential move to B6 (Degree: 4)
+STEP 30: Exploring path from C8 to A7 (Selected as best next move).
+STEP 31: From A7 -> Valid potential move to B5 (Degree: 5)
+STEP 31: From A7 -> Valid potential move to C6 (Degree: 3)
+STEP 31: From A7 -> INVALID move to C8 (Already visited). Skipping.
+STEP 31: From A7 -> INVALID move to B9 (Out of bounds). Skipping.
+STEP 31: From A7 -> INVALID move to @9 (Out of bounds). Skipping.
+STEP 31: From A7 -> INVALID move to ?8 (Out of bounds). Skipping.
+STEP 31: From A7 -> INVALID move to ?6 (Out of bounds). Skipping.
+STEP 31: From A7 -> INVALID move to @5 (Out of bounds). Skipping.
+STEP 31: Exploring path from A7 to C6 (Selected as best next move).
+STEP 32: From C6 -> Valid potential move to D4 (Degree: 5)
+STEP 32: From C6 -> INVALID move to E5 (Already visited). Skipping.
+STEP 32: From C6 -> INVALID move to E7 (Already visited). Skipping.
+STEP 32: From C6 -> Valid potential move to D8 (Degree: 2)
+STEP 32: From C6 -> INVALID move to B8 (Already visited). Skipping.
+STEP 32: From C6 -> INVALID move to A7 (Already visited). Skipping.
+STEP 32: From C6 -> Valid potential move to A5 (Degree: 3)
+STEP 32: From C6 -> INVALID move to B4 (Already visited). Skipping.
+STEP 32: Exploring path from C6 to D8 (Selected as best next move).
+STEP 33: From D8 -> Valid potential move to E6 (Degree: 5)
+STEP 33: From D8 -> INVALID move to F7 (Already visited). Skipping.
+STEP 33: From D8 -> INVALID move to F9 (Out of bounds). Skipping.
+STEP 33: From D8 -> INVALID move to E10 (Out of bounds). Skipping.
+STEP 33: From D8 -> INVALID move to C10 (Out of bounds). Skipping.
+STEP 33: From D8 -> INVALID move to B9 (Out of bounds). Skipping.
+STEP 33: From D8 -> Valid potential move to B7 (Degree: 3)
+STEP 33: From D8 -> INVALID move to C6 (Already visited). Skipping.
+STEP 33: Exploring path from D8 to B7 (Selected as best next move).
+STEP 34: From B7 -> Valid potential move to C5 (Degree: 5)
+STEP 34: From B7 -> Valid potential move to D6 (Degree: 5)
+STEP 34: From B7 -> INVALID move to D8 (Already visited). Skipping.
+STEP 34: From B7 -> INVALID move to C9 (Out of bounds). Skipping.
+STEP 34: From B7 -> INVALID move to A9 (Out of bounds). Skipping.
+STEP 34: From B7 -> INVALID move to @8 (Out of bounds). Skipping.
+STEP 34: From B7 -> INVALID move to @6 (Out of bounds). Skipping.
+STEP 34: From B7 -> Valid potential move to A5 (Degree: 2)
+STEP 34: Exploring path from B7 to A5 (Selected as best next move).
+STEP 35: From A5 -> Valid potential move to B3 (Degree: 4)
+STEP 35: From A5 -> Valid potential move to C4 (Degree: 6)
+STEP 35: From A5 -> INVALID move to C6 (Already visited). Skipping.
+STEP 35: From A5 -> INVALID move to B7 (Already visited). Skipping.
+STEP 35: From A5 -> INVALID move to @7 (Out of bounds). Skipping.
+STEP 35: From A5 -> INVALID move to ?6 (Out of bounds). Skipping.
+STEP 35: From A5 -> INVALID move to ?4 (Out of bounds). Skipping.
+STEP 35: From A5 -> INVALID move to @3 (Out of bounds). Skipping.
+STEP 35: Exploring path from A5 to B3 (Selected as best next move).
+STEP 36: From B3 -> INVALID move to C1 (Already visited). Skipping.
+STEP 36: From B3 -> Valid potential move to D2 (Degree: 3)
+STEP 36: From B3 -> Valid potential move to D4 (Degree: 4)
+STEP 36: From B3 -> Valid potential move to C5 (Degree: 4)
+STEP 36: From B3 -> INVALID move to A5 (Already visited). Skipping.
+STEP 36: From B3 -> INVALID move to @4 (Out of bounds). Skipping.
+STEP 36: From B3 -> INVALID move to @2 (Out of bounds). Skipping.
+STEP 36: From B3 -> Valid potential move to A1 (Degree: 1)
+STEP 36: Exploring path from B3 to A1 (Selected as best next move).
+STEP 37: From A1 -> INVALID move to B-1 (Out of bounds). Skipping.
+STEP 37: From A1 -> INVALID move to C0 (Out of bounds). Skipping.
+STEP 37: From A1 -> Valid potential move to C2 (Degree: 3)
+STEP 37: From A1 -> INVALID move to B3 (Already visited). Skipping.
+STEP 37: From A1 -> INVALID move to @3 (Out of bounds). Skipping.
+STEP 37: From A1 -> INVALID move to ?2 (Out of bounds). Skipping.
+STEP 37: From A1 -> INVALID move to ?0 (Out of bounds). Skipping.
+STEP 37: From A1 -> INVALID move to @-1 (Out of bounds). Skipping.
+STEP 37: Exploring path from A1 to C2 (Selected as best next move).
+STEP 38: From C2 -> INVALID move to D0 (Out of bounds). Skipping.
+STEP 38: From C2 -> INVALID move to E1 (Already visited). Skipping.
+STEP 38: From C2 -> Valid potential move to E3 (Degree: 4)
+STEP 38: From C2 -> Valid potential move to D4 (Degree: 3)
+STEP 38: From C2 -> INVALID move to B4 (Already visited). Skipping.
+STEP 38: From C2 -> Valid potential move to A3 (Degree: 3)
+STEP 38: From C2 -> INVALID move to A1 (Already visited). Skipping.
+STEP 38: From C2 -> INVALID move to B0 (Out of bounds). Skipping.
+STEP 38: Exploring path from C2 to D4 (Selected as best next move).
+STEP 39: From D4 -> INVALID move to E2 (Already visited). Skipping.
+STEP 39: From D4 -> INVALID move to F3 (Already visited). Skipping.
+STEP 39: From D4 -> Valid potential move to F5 (Degree: 3)
+STEP 39: From D4 -> Valid potential move to E6 (Degree: 4)
+STEP 39: From D4 -> INVALID move to C6 (Already visited). Skipping.
+STEP 39: From D4 -> Valid potential move to B5 (Degree: 4)
+STEP 39: From D4 -> INVALID move to B3 (Already visited). Skipping.
+STEP 39: From D4 -> INVALID move to C2 (Already visited). Skipping.
+STEP 39: Exploring path from D4 to F5 (Selected as best next move).
+STEP 40: From F5 -> INVALID move to G3 (Already visited). Skipping.
+STEP 40: From F5 -> INVALID move to H4 (Already visited). Skipping.
+STEP 40: From F5 -> INVALID move to H6 (Already visited). Skipping.
+STEP 40: From F5 -> Valid potential move to G7 (Degree: 3)
+STEP 40: From F5 -> INVALID move to E7 (Already visited). Skipping.
+STEP 40: From F5 -> Valid potential move to D6 (Degree: 4)
+STEP 40: From F5 -> INVALID move to D4 (Already visited). Skipping.
+STEP 40: From F5 -> Valid potential move to E3 (Degree: 3)
+STEP 40: Exploring path from F5 to G7 (Selected as best next move).
+STEP 41: From G7 -> Valid potential move to H5 (Degree: 2)
+STEP 41: From G7 -> INVALID move to I6 (Out of bounds). Skipping.
+STEP 41: From G7 -> INVALID move to I8 (Out of bounds). Skipping.
+STEP 41: From G7 -> INVALID move to H9 (Out of bounds). Skipping.
+STEP 41: From G7 -> INVALID move to F9 (Out of bounds). Skipping.
+STEP 41: From G7 -> Valid potential move to E8 (Degree: 3)
+STEP 41: From G7 -> Valid potential move to E6 (Degree: 3)
+STEP 41: From G7 -> INVALID move to F5 (Already visited). Skipping.
+STEP 41: Exploring path from G7 to H5 (Selected as best next move).
+STEP 42: From H5 -> INVALID move to I3 (Out of bounds). Skipping.
+STEP 42: From H5 -> INVALID move to J4 (Out of bounds). Skipping.
+STEP 42: From H5 -> INVALID move to J6 (Out of bounds). Skipping.
+STEP 42: From H5 -> INVALID move to I7 (Out of bounds). Skipping.
+STEP 42: From H5 -> INVALID move to G7 (Already visited). Skipping.
+STEP 42: From H5 -> Valid potential move to F6 (Degree: 3)
+STEP 42: From H5 -> Valid potential move to F4 (Degree: 3)
+STEP 42: From H5 -> INVALID move to G3 (Already visited). Skipping.
+STEP 42: Exploring path from H5 to F6 (Selected as best next move).
+STEP 43: From F6 -> INVALID move to G4 (Already visited). Skipping.
+STEP 43: From F6 -> INVALID move to H5 (Already visited). Skipping.
+STEP 43: From F6 -> INVALID move to H7 (Already visited). Skipping.
+STEP 43: From F6 -> INVALID move to G8 (Already visited). Skipping.
+STEP 43: From F6 -> Valid potential move to E8 (Degree: 2)
+STEP 43: From F6 -> INVALID move to D7 (Already visited). Skipping.
+STEP 43: From F6 -> Valid potential move to D5 (Degree: 5)
+STEP 43: From F6 -> Valid potential move to E4 (Degree: 4)
+STEP 43: Exploring path from F6 to E8 (Selected as best next move).
+STEP 44: From E8 -> INVALID move to F6 (Already visited). Skipping.
+STEP 44: From E8 -> INVALID move to G7 (Already visited). Skipping.
+STEP 44: From E8 -> INVALID move to G9 (Out of bounds). Skipping.
+STEP 44: From E8 -> INVALID move to F10 (Out of bounds). Skipping.
+STEP 44: From E8 -> INVALID move to D10 (Out of bounds). Skipping.
+STEP 44: From E8 -> INVALID move to C9 (Out of bounds). Skipping.
+STEP 44: From E8 -> Valid potential move to C7 (Degree: 4)
+STEP 44: From E8 -> Valid potential move to D6 (Degree: 3)
+STEP 44: Exploring path from E8 to D6 (Selected as best next move).
+STEP 45: From D6 -> Valid potential move to E4 (Degree: 3)
+STEP 45: From D6 -> INVALID move to F5 (Already visited). Skipping.
+STEP 45: From D6 -> INVALID move to F7 (Already visited). Skipping.
+STEP 45: From D6 -> INVALID move to E8 (Already visited). Skipping.
+STEP 45: From D6 -> INVALID move to C8 (Already visited). Skipping.
+STEP 45: From D6 -> INVALID move to B7 (Already visited). Skipping.
+STEP 45: From D6 -> Valid potential move to B5 (Degree: 3)
+STEP 45: From D6 -> Valid potential move to C4 (Degree: 5)
+STEP 45: Exploring path from D6 to E4 (Selected as best next move).
+STEP 46: From E4 -> INVALID move to F2 (Already visited). Skipping.
+STEP 46: From E4 -> INVALID move to G3 (Already visited). Skipping.
+STEP 46: From E4 -> INVALID move to G5 (Already visited). Skipping.
+STEP 46: From E4 -> INVALID move to F6 (Already visited). Skipping.
+STEP 46: From E4 -> INVALID move to D6 (Already visited). Skipping.
+STEP 46: From E4 -> Valid potential move to C5 (Degree: 3)
+STEP 46: From E4 -> Valid potential move to C3 (Degree: 5)
+STEP 46: From E4 -> Valid potential move to D2 (Degree: 2)
+STEP 46: Exploring path from E4 to D2 (Selected as best next move).
+STEP 47: From D2 -> INVALID move to E0 (Out of bounds). Skipping.
+STEP 47: From D2 -> INVALID move to F1 (Already visited). Skipping.
+STEP 47: From D2 -> INVALID move to F3 (Already visited). Skipping.
+STEP 47: From D2 -> INVALID move to E4 (Already visited). Skipping.
+STEP 47: From D2 -> Valid potential move to C4 (Degree: 4)
+STEP 47: From D2 -> INVALID move to B3 (Already visited). Skipping.
+STEP 47: From D2 -> Valid potential move to B1 (Degree: 2)
+STEP 47: From D2 -> INVALID move to C0 (Out of bounds). Skipping.
+STEP 47: Exploring path from D2 to B1 (Selected as best next move).
+STEP 48: From B1 -> INVALID move to C-1 (Out of bounds). Skipping.
+STEP 48: From B1 -> INVALID move to D0 (Out of bounds). Skipping.
+STEP 48: From B1 -> INVALID move to D2 (Already visited). Skipping.
+STEP 48: From B1 -> Valid potential move to C3 (Degree: 4)
+STEP 48: From B1 -> Valid potential move to A3 (Degree: 2)
+STEP 48: From B1 -> INVALID move to @2 (Out of bounds). Skipping.
+STEP 48: From B1 -> INVALID move to @0 (Out of bounds). Skipping.
+STEP 48: From B1 -> INVALID move to A-1 (Out of bounds). Skipping.
+STEP 48: Exploring path from B1 to A3 (Selected as best next move).
+STEP 49: From A3 -> INVALID move to B1 (Already visited). Skipping.
+STEP 49: From A3 -> INVALID move to C2 (Already visited). Skipping.
+STEP 49: From A3 -> Valid potential move to C4 (Degree: 3)
+STEP 49: From A3 -> Valid potential move to B5 (Degree: 2)
+STEP 49: From A3 -> INVALID move to @5 (Out of bounds). Skipping.
+STEP 49: From A3 -> INVALID move to ?4 (Out of bounds). Skipping.
+STEP 49: From A3 -> INVALID move to ?2 (Out of bounds). Skipping.
+STEP 49: From A3 -> INVALID move to @1 (Out of bounds). Skipping.
+STEP 49: Exploring path from A3 to B5 (Selected as best next move).
+STEP 50: From B5 -> Valid potential move to C3 (Degree: 3)
+STEP 50: From B5 -> INVALID move to D4 (Already visited). Skipping.
+STEP 50: From B5 -> INVALID move to D6 (Already visited). Skipping.
+STEP 50: From B5 -> Valid potential move to C7 (Degree: 3)
+STEP 50: From B5 -> INVALID move to A7 (Already visited). Skipping.
+STEP 50: From B5 -> INVALID move to @6 (Out of bounds). Skipping.
+STEP 50: From B5 -> INVALID move to @4 (Out of bounds). Skipping.
+STEP 50: From B5 -> INVALID move to A3 (Already visited). Skipping.
+STEP 50: Exploring path from B5 to C3 (Selected as best next move).
+STEP 51: From C3 -> Valid potential move to D1 (Degree: 2)
+STEP 51: From C3 -> INVALID move to E2 (Already visited). Skipping.
+STEP 51: From C3 -> INVALID move to E4 (Already visited). Skipping.
+STEP 51: From C3 -> Valid potential move to D5 (Degree: 4)
+STEP 51: From C3 -> INVALID move to B5 (Already visited). Skipping.
+STEP 51: From C3 -> Valid potential move to A4 (Degree: 3)
+STEP 51: From C3 -> INVALID move to A2 (Already visited). Skipping.
+STEP 51: From C3 -> INVALID move to B1 (Already visited). Skipping.
+STEP 51: Exploring path from C3 to D1 (Selected as best next move).
+STEP 52: From D1 -> INVALID move to E-1 (Out of bounds). Skipping.
+STEP 52: From D1 -> INVALID move to F0 (Out of bounds). Skipping.
+STEP 52: From D1 -> INVALID move to F2 (Already visited). Skipping.
+STEP 52: From D1 -> Valid potential move to E3 (Degree: 2)
+STEP 52: From D1 -> INVALID move to C3 (Already visited). Skipping.
+STEP 52: From D1 -> Valid potential move to B2 (Degree: 3)
+STEP 52: From D1 -> INVALID move to B0 (Out of bounds). Skipping.
+STEP 52: From D1 -> INVALID move to C-1 (Out of bounds). Skipping.
+STEP 52: Exploring path from D1 to E3 (Selected as best next move).
+STEP 53: From E3 -> INVALID move to F1 (Already visited). Skipping.
+STEP 53: From E3 -> INVALID move to G2 (Already visited). Skipping.
+STEP 53: From E3 -> INVALID move to G4 (Already visited). Skipping.
+STEP 53: From E3 -> INVALID move to F5 (Already visited). Skipping.
+STEP 53: From E3 -> Valid potential move to D5 (Degree: 3)
+STEP 53: From E3 -> Valid potential move to C4 (Degree: 2)
+STEP 53: From E3 -> INVALID move to C2 (Already visited). Skipping.
+STEP 53: From E3 -> INVALID move to D1 (Already visited). Skipping.
+STEP 53: Exploring path from E3 to C4 (Selected as best next move).
+STEP 54: From C4 -> INVALID move to D2 (Already visited). Skipping.
+STEP 54: From C4 -> INVALID move to E3 (Already visited). Skipping.
+STEP 54: From C4 -> INVALID move to E5 (Already visited). Skipping.
+STEP 54: From C4 -> INVALID move to D6 (Already visited). Skipping.
+STEP 54: From C4 -> Valid potential move to B6 (Degree: 3)
+STEP 54: From C4 -> INVALID move to A5 (Already visited). Skipping.
+STEP 54: From C4 -> INVALID move to A3 (Already visited). Skipping.
+STEP 54: From C4 -> Valid potential move to B2 (Degree: 2)
+STEP 54: Exploring path from C4 to B2 (Selected as best next move).
+STEP 55: From B2 -> INVALID move to C0 (Out of bounds). Skipping.
+STEP 55: From B2 -> INVALID move to D1 (Already visited). Skipping.
+STEP 55: From B2 -> Valid potential move to D3 (Degree: 2)
+STEP 55: From B2 -> INVALID move to C4 (Already visited). Skipping.
+STEP 55: From B2 -> Valid potential move to A4 (Degree: 2)
+STEP 55: From B2 -> INVALID move to @3 (Out of bounds). Skipping.
+STEP 55: From B2 -> INVALID move to @1 (Out of bounds). Skipping.
+STEP 55: From B2 -> INVALID move to A0 (Out of bounds). Skipping.
+STEP 55: Exploring path from B2 to D3 (Selected as best next move).
+STEP 56: From D3 -> INVALID move to E1 (Already visited). Skipping.
+STEP 56: From D3 -> INVALID move to F2 (Already visited). Skipping.
+STEP 56: From D3 -> Valid potential move to F4 (Degree: 2)
+STEP 56: From D3 -> INVALID move to E5 (Already visited). Skipping.
+STEP 56: From D3 -> Valid potential move to C5 (Degree: 2)
+STEP 56: From D3 -> INVALID move to B4 (Already visited). Skipping.
+STEP 56: From D3 -> INVALID move to B2 (Already visited). Skipping.
+STEP 56: From D3 -> INVALID move to C1 (Already visited). Skipping.
+STEP 56: Exploring path from D3 to F4 (Selected as best next move).
+STEP 57: From F4 -> INVALID move to G2 (Already visited). Skipping.
+STEP 57: From F4 -> INVALID move to H3 (Already visited). Skipping.
+STEP 57: From F4 -> INVALID move to H5 (Already visited). Skipping.
+STEP 57: From F4 -> INVALID move to G6 (Already visited). Skipping.
+STEP 57: From F4 -> Valid potential move to E6 (Degree: 2)
+STEP 57: From F4 -> Valid potential move to D5 (Degree: 2)
+STEP 57: From F4 -> INVALID move to D3 (Already visited). Skipping.
+STEP 57: From F4 -> INVALID move to E2 (Already visited). Skipping.
+STEP 57: Exploring path from F4 to E6 (Selected as best next move).
+STEP 58: From E6 -> INVALID move to F4 (Already visited). Skipping.
+STEP 58: From E6 -> INVALID move to G5 (Already visited). Skipping.
+STEP 58: From E6 -> INVALID move to G7 (Already visited). Skipping.
+STEP 58: From E6 -> INVALID move to F8 (Already visited). Skipping.
+STEP 58: From E6 -> INVALID move to D8 (Already visited). Skipping.
+STEP 58: From E6 -> Valid potential move to C7 (Degree: 2)
+STEP 58: From E6 -> Valid potential move to C5 (Degree: 1)
+STEP 58: From E6 -> INVALID move to D4 (Already visited). Skipping.
+STEP 58: Exploring path from E6 to C5 (Selected as best next move).
+STEP 59: From C5 -> INVALID move to D3 (Already visited). Skipping.
+STEP 59: From C5 -> INVALID move to E4 (Already visited). Skipping.
+STEP 59: From C5 -> INVALID move to E6 (Already visited). Skipping.
+STEP 59: From C5 -> INVALID move to D7 (Already visited). Skipping.
+STEP 59: From C5 -> INVALID move to B7 (Already visited). Skipping.
+STEP 59: From C5 -> INVALID move to A6 (Already visited). Skipping.
+STEP 59: From C5 -> Valid potential move to A4 (Degree: 1)
+STEP 59: From C5 -> INVALID move to B3 (Already visited). Skipping.
+STEP 59: Exploring path from C5 to A4 (Selected as best next move).
+STEP 60: From A4 -> INVALID move to B2 (Already visited). Skipping.
+STEP 60: From A4 -> INVALID move to C3 (Already visited). Skipping.
+STEP 60: From A4 -> INVALID move to C5 (Already visited). Skipping.
+STEP 60: From A4 -> Valid potential move to B6 (Degree: 2)
+STEP 60: From A4 -> INVALID move to @6 (Out of bounds). Skipping.
+STEP 60: From A4 -> INVALID move to ?5 (Out of bounds). Skipping.
+STEP 60: From A4 -> INVALID move to ?3 (Out of bounds). Skipping.
+STEP 60: From A4 -> INVALID move to @2 (Out of bounds). Skipping.
+STEP 60: Exploring path from A4 to B6 (Selected as best next move).
+STEP 61: From B6 -> INVALID move to C4 (Already visited). Skipping.
+STEP 61: From B6 -> Valid potential move to D5 (Degree: 1)
+STEP 61: From B6 -> INVALID move to D7 (Already visited). Skipping.
+STEP 61: From B6 -> INVALID move to C8 (Already visited). Skipping.
+STEP 61: From B6 -> Valid potential move to A8 (Degree: 1)
+STEP 61: From B6 -> INVALID move to @7 (Out of bounds). Skipping.
+STEP 61: From B6 -> INVALID move to @5 (Out of bounds). Skipping.
+STEP 61: From B6 -> INVALID move to A4 (Already visited). Skipping.
+STEP 61: Exploring path from B6 to D5 (Selected as best next move).
+STEP 62: From D5 -> INVALID move to E3 (Already visited). Skipping.
+STEP 62: From D5 -> INVALID move to F4 (Already visited). Skipping.
+STEP 62: From D5 -> INVALID move to F6 (Already visited). Skipping.
+STEP 62: From D5 -> INVALID move to E7 (Already visited). Skipping.
+STEP 62: From D5 -> Valid potential move to C7 (Degree: 1)
+STEP 62: From D5 -> INVALID move to B6 (Already visited). Skipping.
+STEP 62: From D5 -> INVALID move to B4 (Already visited). Skipping.
+STEP 62: From D5 -> INVALID move to C3 (Already visited). Skipping.
+STEP 62: Exploring path from D5 to C7 (Selected as best next move).
+STEP 63: From C7 -> INVALID move to D5 (Already visited). Skipping.
+STEP 63: From C7 -> INVALID move to E6 (Already visited). Skipping.
+STEP 63: From C7 -> INVALID move to E8 (Already visited). Skipping.
+STEP 63: From C7 -> INVALID move to D9 (Out of bounds). Skipping.
+STEP 63: From C7 -> INVALID move to B9 (Out of bounds). Skipping.
+STEP 63: From C7 -> Valid potential move to A8 (Degree: 0)
+STEP 63: From C7 -> INVALID move to A6 (Already visited). Skipping.
+STEP 63: From C7 -> INVALID move to B5 (Already visited). Skipping.
+STEP 63: Exploring path from C7 to A8 (Selected as best next move).
+
+--- Search Complete ---
+
+--- Knight's Tour Found! ---
+Time taken: 22 ms
+Movement sequence in chess notation:
+H2 -> F1 -> G3 -> H1 -> F2 -> H3 -> G1 -> E2 -> C1 -> A2 -> 
+B4 -> A6 -> B8 -> D7 -> F8 -> H7 -> G5 -> F7 -> H8 -> G6 -> 
+H4 -> G2 -> E1 -> F3 -> E5 -> G4 -> H6 -> G8 -> E7 -> C8 -> 
+A7 -> C6 -> D8 -> B7 -> A5 -> B3 -> A1 -> C2 -> D4 -> F5 -> 
+G7 -> H5 -> F6 -> E8 -> D6 -> E4 -> D2 -> B1 -> A3 -> B5 -> 
+C3 -> D1 -> E3 -> C4 -> B2 -> D3 -> F4 -> E6 -> C5 -> A4 -> 
+B6 -> D5 -> C7 -> A8
+
+Board with step order:
+ 63 12 29 32 43 14 27 18
+ 30 33 62 13 28 17 40 15
+ 11 60 31 44 57 42 19 26
+ 34 49 58 61 24 39 16 41
+ 59 10 53 38 45 56 25 20
+ 48 35 50 55 52 23  2  5
+  9 54 37 46  7  4 21  0
+ 36 47  8 51 22  1  6  3
